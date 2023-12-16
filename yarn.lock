@@ -5938,6 +5938,7 @@ __metadata:
     expo-router: 3.3.1
     expo-splash-screen: ~0.26.0
     expo-status-bar: ~1.11.0
+    expo-system-ui: next
     react: 18.2.0
     react-dom: 18.2.0
     react-native: 0.73.0
@@ -6159,6 +6160,18 @@ __metadata:
   version: 1.11.0
   resolution: "expo-status-bar@npm:1.11.0"
   checksum: 4da8e1abdaa63deaab952b571aa58d2c22c7ca2e336d7b9368286116d10c21357bb245fed9b1fcff7f8883f4246d7eb99d2e3847cbba257596a7ecd616a50356
+  languageName: node
+  linkType: hard
+
+"expo-system-ui@npm:next":
+  version: 2.9.0
+  resolution: "expo-system-ui@npm:2.9.0"
+  dependencies:
+    "@react-native/normalize-color": ^2.0.0
+    debug: ^4.3.2
+  peerDependencies:
+    expo: "*"
+  checksum: 482868a9444d0a9ba1e73802152d5c00420aeac860e37bb730a26a0363af7b9ab24ea21053e6b03a9b9ca6e738a97bb00019127023d000f911e8166690b8e20d
   languageName: node
   linkType: hard
 

@@ -1,19 +1,33 @@
 {
   "expo": {
-    "name": "solito-nativewind",
-    "slug": "solito-nativewind",
+    "name": "Mike Folio",
+    "slug": "ma-folio",
     "version": "1.0.0",
-    "scheme": "solito-nativewind",
+    "scheme": "ma-folio",
     "userInterfaceStyle": "automatic",
-    "platforms": [
-      "ios",
-      "android"
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.solito.nativewind"
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mafolio.fifth"
     },
-     "android": {
-      "package": "com.solito.nativewind"
+    "android": {
+      "package": "com.mafolio.fifth",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "experiments": {
+      "typedRoutes": true
     },
     "plugins": [
       "expo-font",
@@ -23,6 +37,15 @@
           "root": "./app"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false,
+        "root": "./app"
+      },
+      "eas": {
+        "projectId": "325a7457-d778-4f53-b6fc-8639146ccb6d"
+      }
+    }
   }
 }
