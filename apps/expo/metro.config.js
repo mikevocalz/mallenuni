@@ -23,8 +23,52 @@ config.resolver.nodeModulesPaths = [
 ]
 // 3. Force Metro to resolve (sub)dependencies only from the `nodeModulesPaths`
 config.resolver.disableHierarchicalLookup = true
+config.resolver.unstable_enablePackageExports = true
+
+module.exports = (async () => {
+  const {
+    resolver: { sourceExts, assetExts },
+  } = await getDefaultConfig(__dirname)
+  return {
+    transformer: {
+      babelTransformerPath: require.resolve('react-native-svg-transformer'),
+    },
+    resolver: {
+      assetExts: [
+        assetExts.filter((ext) => ext !== 'svg'),
+        ...assetExts,
+        'obj',
+        'mtl',
+        'jpg',
+        'vrx',
+        'hdr',
+        'png',
+        'jpeg',
+        'gltf',
+        'glb',
+        'bin',
+        'arobject',
+        'gif',
+        'svg',
+        'pdf',
+        'ttf',
+      ],
+      sourceExts: [
+        ...sourceExts,
+        'ts',
+        'tsx',
+        'js',
+        'jsx',
+        'json',
+        'cjs',
+        'svg',
+      ],
+    },
+  }
+})()
 
 module.exports = withNativeWind(config, {
   input: './global.css',
+  projectRoot,
   inlineRem: false,
 })

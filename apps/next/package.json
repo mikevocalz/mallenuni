@@ -1,5 +1,5 @@
 {
-  "name": "next-app",
+  "name": "fifth-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,15 +10,32 @@
   },
   "dependencies": {
     "@expo/next-adapter": "5.0.2",
+    "@expo/vector-icons": "^13.0.0",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.20.2",
     "app": "*",
-    "next": "13.4.19",
+    "file-loader": "^6.2.0",
+    "nativewind": "4.0.16",
+    "next": "14.0.4",
+    "next-sanity": "^6.0.5",
+    "nextjs-progressbar": "^0.0.16",
+    "nextjs-toploader": "^1.6.4",
     "raf": "^3.4.1",
-    "setimmediate": "^1.0.5"
+    "react-native-vector-icons-for-web": "^0.1.7",
+    "sanity": "^3.20.0",
+    "setimmediate": "^1.0.5",
+    "styled-components": "^6.1.1",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.23.4",
+    "@sanity/eslint-config-studio": "^3.0.1",
     "@types/node": "17.0.21",
-    "autoprefixer": "^10.4.7",
+    "@types/styled-components": "^5.1.32",
+    "autoprefixer": "10.4.14",
+    "critters": "^0.0.20",
     "eslint-config-next": "13.2.0",
-    "tailwindcss": "^3.0.24"
+    "tailwind-scrollbar": "3.0.5",
+    "tailwindcss": "^3.3.2"
   }
 }

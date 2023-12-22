@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Mike Folio",
+    "name": "5th Galaxy",
     "slug": "ma-folio",
     "version": "1.0.0",
     "scheme": "ma-folio",
@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -23,25 +23,24 @@
       "package": "com.mafolio.fifth",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000"
       }
     },
     "experiments": {
       "typedRoutes": true
     },
-    "plugins": [
-      "expo-font",
-      [
+     "plugins": [
         "expo-router",
+      [
+        "expo-screen-orientation",
         {
-          "root": "./app"
+          "initialOrientation": "DEFAULT"
         }
       ]
     ],
     "extra": {
       "router": {
-        "origin": false,
-        "root": "./app"
+        "origin": false
       },
       "eas": {
         "projectId": "325a7457-d778-4f53-b6fc-8639146ccb6d"

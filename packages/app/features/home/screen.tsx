@@ -1,14 +1,18 @@
 
-import { View, Text } from 'react-native'
-import { TextLink } from 'solito/link'
-import { MotiLink } from 'solito/moti'
+import { View, Text, Platform } from 'react-native'
+import { TestimonySection } from 'app/components/TestimonySection';
+import { NewsLetterSection } from 'app/components/NewsLetterSection';
+import { HeroSection } from 'app/components/Hero';
 
 export function HomeScreen() {
-  return (
-    <View className='flex-1 items-center  bg-red-500 p-4'
-    >
-      <Text>Welcome to Solito.</Text>
 
+  const isWeb = Platform.OS === 'web'
+  return (
+    <View className='flex-1 items-center min-h-screen max-w-7xl w-full '>
+      <HeroSection />
+      <TestimonySection />
+      <NewsLetterSection />
     </View >
   )
 }
+

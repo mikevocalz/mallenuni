@@ -7,6 +7,8 @@ import React from 'react'
 
 import '../global.css'
 import { AppProps } from 'next/app'
+import WebLayout from 'app/layout/web'
+import WebFooter from 'app/components/WebFooter'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -20,7 +22,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Provider>
-        <Component {...pageProps} />
+        <WebLayout>
+          <Component {...pageProps} />
+        </WebLayout>
       </Provider>
     </>
   )
