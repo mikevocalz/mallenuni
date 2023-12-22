@@ -2,7 +2,8 @@
 import { AppSection } from 'app/components/AppSection'
 import { CheckListSection } from 'app/components/CheckListSection'
 import Logo from 'app/components/svgs/Logo'
-import { View, Text, ScrollView, Platform } from 'react-native'
+import { View, Text, Platform } from 'react-native'
+import { ScrollView } from 'moti';
 
 
 const isWeb = Platform.OS === 'web'
@@ -13,7 +14,24 @@ export function AboutScreen() {
 
     <View
       className='flex-1 items-center min-h-screen max-w-7xl w-full bg-black '>
-      <ScrollView className='pb-[300px]'
+      <ScrollView
+        from={{
+          opacity: 0,
+          scale: 0.9,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+        }}
+        exit={{
+          opacity: 0,
+          scale: 0.9,
+        }}
+        exitTransition={{
+          type: 'timing',
+          duration: 2500,
+        }}
+        className='pb-[300px]'
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           paddingBottom: !isWeb ? 200 : null,

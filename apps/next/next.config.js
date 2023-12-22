@@ -74,6 +74,7 @@ const nextConfig = {
     'react-native-reanimated-carousel',
     'react-responsive-carousel',
     'react-native-mmkv',
+    '@react-native-seoul/masonry-list',
   ],
 
   webpack(config, options) {
