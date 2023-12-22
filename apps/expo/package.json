@@ -53,10 +53,10 @@
     "start": "npx expo start --clear",
     "android": "npx expo run:android",
     "ios": "npx expo run:ios",
-    "web": "expo start --web",
+    "web": "npx expo start --web",
     "prebuild": "npx expo prebuild"
   },
-  "main": "./index.js",
+  "main": "index.js",
   "version": "1.0.0",
   "private": true,
   "name": "expo-app"

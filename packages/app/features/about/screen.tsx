@@ -1,24 +1,29 @@
 
+import { AppSection } from 'app/components/AppSection'
+import { CheckListSection } from 'app/components/CheckListSection'
 import Logo from 'app/components/svgs/Logo'
-import { View, Text } from 'react-native'
-import { TextLink } from 'solito/build/link'
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { View, Text, ScrollView, Platform } from 'react-native'
+
+
+const isWeb = Platform.OS === 'web'
 
 export function AboutScreen() {
 
   return (
-    <View className="flex-1 h-full items-center min-h-screen self-center w-screen max-w-7xl   bg-green-200" >
 
-      <Text >About</Text>
-
-      <TextLink href="/user/fernando">Regular Link</TextLink>
-      <Icon
-        name="settings"
-        as={MaterialIcons}
-        size={30}
-      />
-
+    <View
+      className='flex-1 items-center min-h-screen max-w-7xl w-full bg-black '>
+      <ScrollView className='pb-[300px]'
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+          paddingBottom: !isWeb ? 200 : null,
+          paddingTop: !isWeb ? 40 : null
+        }}
+        contentContainerClassName='flex-1 w-full bg-black '>
+        <Text >About</Text>
+        <AppSection />
+        <CheckListSection />
+      </ScrollView>
     </View >
   )
 }

@@ -1,4 +1,4 @@
-import { View, Text, } from "react-native"
+import { View, Text, Platform } from "react-native"
 import { Section, BlockQuote, Article, P, Span } from '@expo/html-elements'
 import SVGStar from "./svgs/SVGStars"
 import { SolitoImage } from 'solito/image'
@@ -8,7 +8,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const RNSection = remapProps(Section, { className: "style" });
-
+const mobile = Platform.OS !== 'web'
 const testimonials = [
   {
     id: 1,
@@ -49,21 +49,24 @@ const testimonials = [
 
 ]
 
+const numItemsToRender = mobile ? 3 : 6;
+
 export function TestimonySection() {
   return (
-    <Section className="flex  pb-[200px]">
+    <Section className="flex pb-[200px]">
       <View className="mx-auto  max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16 items-center">
-        <Text className="text-center mb-10 max-w-[500px] leading-lose text-4xl font-bold  text-gray-100 sm:text-5xl">
+        <Text style={{ marginTop: mobile ? 60 : null }}
+          className="text-center mb-10 max-w-[500px] leading-lose text-4xl font-bold  text-gray-100 sm:text-5xl">
           Read Trusted Reviews
         </Text>
 
-        <View className="mt-8 mx-8 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-14 lg:gap-20">
-          {testimonials.map((testimony, i) => {
+        <View className={`mt-8  ${mobile ? 'flex-row flex-wrap gap-3' : 'mx-8  grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-14 lg:gap-20 '} `}>
+          {testimonials.slice(0, numItemsToRender).map((testimony, i) => {
             return (
-              <Article key={i} className="mb-8 rounded-xl  min-w-[300px] p-4 bg-zinc-950">
+              <Article key={i} className="mb-4 items-center justify-center rounded-xl  min-w-[300px] p-3 bg-zinc-950">
                 <BlockQuote
                   style={{
-                    padding: 20,
+                    padding: 10,
                   }}
                 >
                   <View className="flex flex-row items-center gap-4">

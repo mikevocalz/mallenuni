@@ -5807,7 +5807,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "app@workspace:packages/app"
   dependencies:
-    moti: latest
+    framer-motion: 10.16.16
+    moti: ^0.27.2
     nativewind: 4.0.16
     solito: 4.2.0
   languageName: unknown
@@ -9743,7 +9744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^10.0.0, framer-motion@npm:^10.16.16, framer-motion@npm:^10.16.5":
+"framer-motion@npm:10.16.16, framer-motion@npm:^10.0.0, framer-motion@npm:^10.16.16, framer-motion@npm:^10.16.5":
   version: 10.16.16
   resolution: "framer-motion@npm:10.16.16"
   dependencies:
@@ -13481,7 +13482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moti@npm:latest":
+"moti@npm:^0.27.2":
   version: 0.27.2
   resolution: "moti@npm:0.27.2"
   dependencies:
@@ -17355,12 +17356,12 @@ __metadata:
   linkType: hard
 
 "sucrase@npm:^3.20.0, sucrase@npm:^3.32.0":
-  version: 3.34.0
-  resolution: "sucrase@npm:3.34.0"
+  version: 3.35.0
+  resolution: "sucrase@npm:3.35.0"
   dependencies:
     "@jridgewell/gen-mapping": ^0.3.2
     commander: ^4.0.0
-    glob: 7.1.6
+    glob: ^10.3.10
     lines-and-columns: ^1.1.6
     mz: ^2.7.0
     pirates: ^4.0.1
@@ -17368,7 +17369,7 @@ __metadata:
   bin:
     sucrase: bin/sucrase
     sucrase-node: bin/sucrase-node
-  checksum: 61860063bdf6103413698e13247a3074d25843e91170825a9752e4af7668ffadd331b6e99e92fc32ee5b3c484ee134936f926fa9039d5711fafff29d017a2110
+  checksum: 9fc5792a9ab8a14dcf9c47dcb704431d35c1cdff1d17d55d382a31c2e8e3063870ad32ce120a80915498486246d612e30cda44f1624d9d9a10423e1a43487ad1
   languageName: node
   linkType: hard
 

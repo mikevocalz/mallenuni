@@ -1,9 +1,13 @@
+import '../global.css'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Entypo from "@expo/vector-icons/Entypo";
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-
+import { ActivityIndicator, View, useColorScheme, Text } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import { Provider } from 'app/provider'
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -22,6 +26,7 @@ export default function RootLayout() {
   const [loaded, error] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
     ...FontAwesome.font,
+    ...Entypo.font,
   });
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
@@ -36,7 +41,8 @@ export default function RootLayout() {
   }, [loaded]);
 
   if (!loaded) {
-    return null;
+    return <ActivityIndicator size={'large'} color={'red'} style={{ marginTop: '50%' }} />
+
   }
 
   return <RootLayoutNav />;
@@ -45,11 +51,13 @@ export default function RootLayout() {
 function RootLayoutNav() {
 
   return (
-    <>
+    <Provider>
+      <StatusBar style="dark" animated />
+
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
       </Stack>
-    </>
+    </Provider>
   );
 }

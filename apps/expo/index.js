@@ -1,25 +1,24 @@
 // registerRootComponent happens in "expo-router/entry"
-import 'expo-router/entry'
-import './global.css'
+//import 'expo-router/entry'
 
+// Step 1: Import React Native Feature Flags
 import ReactNativeFeatureFlags from 'react-native/Libraries/ReactNative/ReactNativeFeatureFlags'
 
-// enable the JS-side of the w3c PointerEvent implementation
+// Step 2: Enable pointer events in JavaScript
 ReactNativeFeatureFlags.shouldEmitW3CPointerEvents = () => true
 
-// enable hover events in Pressibility to be backed by the PointerEvent implementation.
-// shouldEmitW3CPointerEvents should also be true
-
+// Step 3: Enable pointer event based hover events in Pressibility
 ReactNativeFeatureFlags.shouldPressibilityUseW3CPointerEventsForHover = () =>
   true
 
-// import { registerRootComponent } from 'expo'
-// import { ExpoRoot } from 'expo-router'
+import { registerRootComponent } from 'expo'
+import { ExpoRoot } from 'expo-router'
 
-// Must be exported or Fast Refresh won't update the context
-// export function App() {
-//   const ctx = require.context('./app')
-//   return <ExpoRoot context={ctx} />
-// }
+//Must be exported or Fast Refresh won't update the context
 
-// registerRootComponent(App)
+export function App() {
+  const ctx = require.context('./app')
+  return <ExpoRoot context={ctx} />
+}
+
+registerRootComponent(App)

@@ -82,6 +82,12 @@ const nextConfig = {
       loader: 'url-loader', // or directly file-loader
     })
 
+    config.module.rules.push({
+      test: /\.mjs$/,
+      include: /node_modules/,
+      type: 'javascript/auto',
+    })
+
     // Mix in aliases
     if (!config.resolve) {
       config.resolve = {}

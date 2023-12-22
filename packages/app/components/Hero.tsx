@@ -1,4 +1,4 @@
-import { View, Text, TextInput, Pressable, Button } from "react-native"
+import { View, Text, TextInput, Pressable, Button, Platform } from "react-native"
 import { Section, Div, P, Span, H1, H3, LI, UL, A } from '@expo/html-elements'
 import { SolitoImage } from 'solito/image'
 import { MotiPressable } from "moti/interactions"
@@ -6,12 +6,12 @@ import RocketImg from '../../../apps/expo/assets/images/rocket-r.jpg';
 import CirclesGrid from "./svgs/CirclesGrid";
 import { MotiView, motify } from 'moti'
 
-const MotifiedPress = motify(Pressable)()
+const isWeb = Platform.OS === 'web'
 
 export function HeroSection() {
 
   return (
-    <Section className="w-full flex   pb-[110px] pt-[120px] dark:bg-dark lg:pt-[50px]">
+    <Section className="w-full flex   pb-[110px] sm:pt-[120px]  lg:pt-[50px]">
       <Div className="mx-4 flex flex-row flex-wrap">
         <Div className="w-full  px-4 lg:w-5/12">
           <Div className="hero-content mb-20  ">
@@ -41,7 +41,8 @@ export function HeroSection() {
         </Div>
         <Div className="hidden px-4 lg:block lg:w-1/12"></Div>
 
-        <Div className="w-full h-full px-4 lg:w-6/12 ">
+        <Div style={{ paddingHorizontal: !isWeb ? 0 : 16 }}
+          className="w-full h-full lg:w-6/12 ">
           <Div className="lg:ml-auto lg:text-right">
             <Div className="relative w-full z-10 inline-block pt-11 lg:pt-0">
               <SolitoImage

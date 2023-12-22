@@ -2,6 +2,8 @@ import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable } from 'react-native';
+import { SolitoImage } from 'solito/image';
+import logoImg from '../../assets/images/5thgalx-hor.png';
 
 
 
@@ -25,8 +27,38 @@ export default function TabLayout() {
     <Tabs
       initialRouteName='index'
       screenOptions={{
-        tabBarActiveTintColor: 'red',
-        tabBarInactiveTintColor: 'blue',
+        headerTitleAlign: 'left',
+        headerTitle: () =>
+          <SolitoImage
+            alt='logo'
+            src={logoImg}
+            width={200}
+            height={150}
+            contentFit={'contain'}
+            style={{
+              width: 210,
+              height: 80,
+              marginBottom: 3,
+              marginLeft: -12
+            }}
+            priority
+            unoptimized
+          />,
+        tabBarActiveTintColor: '#000',
+        tabBarInactiveTintColor: '#e5e7eb',
+        headerStyle: {
+          backgroundColor: '#a78bfa',
+          elevation: 0,
+          shadowOpacity: 0,
+          borderBottomWidth: 0
+        },
+        tabBarStyle: {
+          backgroundColor: '#4c1d95',
+          borderTopWidth: 0,
+          elevation: 0,
+          shadowOpacity: 0,
+          borderWidth: 0
+        },
         // Disable the static render of the header on web
         // to prevent a hydration error in React Navigation v6.
         headerShown: true,
@@ -45,19 +77,21 @@ export default function TabLayout() {
           </Link>
         )
       }}>
-      {tabs.map((tab) => {
-        return (
-          <Tabs.Screen
-            key={tab.id}
-            name={`${tab.screen}`}
-            options={{
-              title: tab.title,
-              tabBarIcon: ({ color }) => <TabBarIcon name={tab.icon} color={color} />
-            }}
+      {
+        tabs.map((tab) => {
+          return (
+            <Tabs.Screen
+              key={tab.id}
+              name={`${tab.screen}`}
+              options={{
+                title: tab.title.toUpperCase(),
+                tabBarIcon: ({ color }) => <TabBarIcon name={tab.icon} color={color} />
+              }}
 
-          />
-        )
-      })}
-    </Tabs>
+            />
+          )
+        })
+      }
+    </Tabs >
   );
 }

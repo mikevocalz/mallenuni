@@ -62,6 +62,7 @@ module.exports = (async () => {
         'json',
         'cjs',
         'svg',
+        'mjs',
       ],
     },
   }

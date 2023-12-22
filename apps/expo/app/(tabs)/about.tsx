@@ -1,5 +1,5 @@
-import { WorkScreen } from 'app/features/work/screen'
+import { AboutScreen } from 'app/features/about/screen'
 
-export default function Work() {
-  return <WorkScreen />
+export default function About() {
+  return <AboutScreen />
 }

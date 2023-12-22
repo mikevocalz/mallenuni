@@ -3,7 +3,8 @@
   "name": "app",
   "main": "index.ts",
   "dependencies": {
-    "moti": "latest",
+    "framer-motion": "10.16.16",
+    "moti": "^0.27.2",
     "nativewind": "4.0.16",
     "solito": "4.2.0"
   },
