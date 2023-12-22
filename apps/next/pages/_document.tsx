@@ -28,8 +28,11 @@ ${customFontCss}
 
 `
 
+
+
 class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
+
     const originalRenderPage = ctx.renderPage;
 
     // Run the React rendering logic synchronously
@@ -54,6 +57,8 @@ class Document extends NextDocument {
   }
 
   render() {
+
+
     return (
       <Html lang="en">
         <Head>
