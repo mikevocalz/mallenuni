@@ -1,26 +1,26 @@
 
-import { View, Text } from 'react-native'
+import { ContactHero } from 'app/components/ContactHero'
+import { View, Text, ScrollView, Platform } from 'react-native'
 import { MotiLink } from 'solito/moti'
+
+
+const isWeb = Platform.OS === 'web'
 
 export function ContactScreen() {
 
 
   return (
-    <View className='flex-1 h-full items-center min-h-screen self-center w-screen max-w-7xl  bg-red-500 p-4'
-    >
-      <Text>Contact</Text>
-
-      <MotiLink
-        href={'/user/fernando'}
-        animate={({ hovered, pressed }) => {
-          'worklet'
-          return {
-            scale: pressed ? 0.9 : hovered ? 1.1 : 1,
-          }
+    <View
+      className='flex-1 items-center min-h-screen max-w-7xl w-full bg-black '>
+      <ScrollView className='pb-[300px]'
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{
+          paddingBottom: !isWeb ? 200 : null,
+          paddingTop: !isWeb ? 40 : 0
         }}
-      >
-        Link Me
-      </MotiLink>
+        contentContainerClassName='flex-1 w-full bg-black '>
+        <ContactHero />
+      </ScrollView>
     </View >
   )
 }

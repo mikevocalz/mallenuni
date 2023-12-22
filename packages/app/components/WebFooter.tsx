@@ -38,7 +38,7 @@ const WebFooter = () => {
             <h2 className="mb-6  md:text-3xl text-2xl font-semibold font-[BebasNeue-Bold] uppercase text-purple-950 tracking-wide">Let's Connect</h2>
             <ul className="text-gray-800 ">
               <li className="mb-4">
-                <a href="mailto:dynamicphlebotomycpr@gmail.com" className="hover:underline break-all ">dynamicphlebotomycpr@gmail.com</a>
+                <a href="mailto:mikefacesny@gmail.com" className="hover:underline break-all ">mikefacesny@gmail.com</a>
               </li>
 
             </ul>
@@ -49,10 +49,10 @@ const WebFooter = () => {
             <h2 className="mb-6 md:text-3xl text-2xl font-semibold font-[BebasNeue-Bold] tracking-wide uppercase text-purple-950">Socials</h2>
             <ul className="text-gray-800 ">
               <li className="mb-4">
-                <a href="https://www.facebook.com/Dynamic-PhlebotomyCPR-733562010164615" className="hover:underline">Facebook</a>
+                <a href="#" className="hover:underline">Facebook</a>
               </li>
               <li className="mb-4">
-                <a href="http://www.instagram.com/dynamic_phlebotomy" className="hover:underline">Instagram</a>
+                <a href="#" className="hover:underline">Instagram</a>
               </li>
             </ul>
           </Div>
@@ -62,7 +62,7 @@ const WebFooter = () => {
       <hr className="my-0 border-red-700 sm:mx-auto  lg:my-8" />
 
       <Div className="px-4 py-3 text-center bg-violet-900 flex  w-full items-center justify-center  flex-wrap ">
-        <Span className="font-bold flex-wrap text-sm text-gray-300 px-6 sm:text-center">© 2024  <a href="https://www.dynamicphlebotomycpr.org" className="mx-2 tracking-wider ">Dynamic Phlebotomy & CPR. </a> <br className='sm:hidden' /><a> All Rights Reserved.</a>
+        <Span className="font-bold flex-wrap text-sm text-gray-300 px-6 sm:text-center">© 2024  <a href="https://www.dynamicphlebotomycpr.org" className="mx-2 tracking-wider ">5th Galaxy Studio's. </a> <br className='sm:hidden' /><a> All Rights Reserved.</a>
         </Span>
       </Div>
 
