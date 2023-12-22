@@ -14,10 +14,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Solito Example App</title>
+        <title>5th Galaxy Studio's</title>
         <meta
           name="description"
-          content="Expo + Next.js with Solito. By Fernando Rojo."
+          content="Unlock innovation with 5th Galaxy Studio's, your trusted partner in software development. Our skilled team specializes in crafting cutting-edge iOS, Android, and web applications that redefine user experiences. From seamless cross-platform solutions to tailored app experiences, we deliver excellence in every line of code. Collaborate with us to turn your digital vision into reality."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

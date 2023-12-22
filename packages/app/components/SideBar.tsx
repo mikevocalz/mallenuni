@@ -47,7 +47,7 @@ const buttons = [
   {
     id: 'second',
     name: 'work',
-    href: '/Work'
+    href: '/work'
   },
   {
     id: 'third',

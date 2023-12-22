@@ -53,7 +53,7 @@ export function WebHeader() {
 
   return (
     <Header className='headingNav fixed inset-x-0  left-0 top-0 right-0 z-40 border-b-[0.5px] border-black bg-violet-400  h-[70px]' >
-      <View className='flex w-full items-center justify-center  '>
+      <View className='flex w-full items-center left-0 right-0 justify-center  sticky'>
         <View className=' flex-row w-screen max-w-7xl pr-2 justify-between'>
           <View className="flex items-center justify-center ml-[8px] md:ml-4">
             <Link href="/">
