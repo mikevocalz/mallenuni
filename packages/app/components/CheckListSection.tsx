@@ -66,7 +66,7 @@ const list = [
 
 export function CheckListSection() {
   return (
-    <Section className=" rounded-lg ">
+    <Section className=" rounded-lg mt-[60px]">
 
 
 
@@ -77,7 +77,7 @@ export function CheckListSection() {
           Our apps boasts a diverse array of features, ranging from intuitive user interfaces to robust functionality, ensuring a seamless experience for both novice and advanced users. With a focus on innovation and user-centric design, our software delivers unparalleled convenience, making it an indispensable tool for your needs.
         </H4>
 
-        <Div className={`${isWeb ? 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3' : ' '} items-center  gap-x-6 `}>
+        <Div className={`${isWeb ? 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3' : ' flex-row max-w-4xl justify-center flex-wrap'} items-center   gap-x-6 `}>
 
           {list.map((item, index) => {
             return (

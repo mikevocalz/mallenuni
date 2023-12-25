@@ -35,9 +35,11 @@ export function AboutScreen() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           paddingBottom: !isWeb ? 200 : null,
-          paddingTop: !isWeb ? 40 : null
-        }}
-        contentContainerClassName='flex-1 w-full bg-black '>
+          paddingTop: !isWeb ? 40 : null,
+          //flex: 1,
+          width: '100%',
+          //flexDirection: 'column',
+        }}>
         <Text >About</Text>
         <AppSection />
         <CheckListSection />

@@ -8,9 +8,9 @@ import { Main } from '@expo/html-elements'
 function WebLayout({ children }): ReactElement {
 
   return (
-    <View className="relative -z-40  flex-col bg-black min-h-full w-screen overflow-y-hidden mt-[70px] ">
+    <View className="relative -z-40  flex-col bg-black min-h-full w-screen overflow-y-hidden ">
       <WebHeader />
-      <Main className='w-full items-center'>{children}</Main>
+      <Main className='w-full items-center mt-[70px]'>{children}</Main>
       <WebFooter />
     </View>
   )

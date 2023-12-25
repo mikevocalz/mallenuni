@@ -21,7 +21,7 @@ export function ContactHero() {
             </H1>
           </Div>
         </Div>
-        <Div className="hidden px-4 lg:block lg:w-1/12"></Div>
+        <Div className="hidden px-4 lg:block lg:w-1/12" />
 
         <Div style={{ paddingHorizontal: !isWeb ? 0 : 16 }}
           className="w-full h-full lg:w-6/12 ">
@@ -80,7 +80,7 @@ export function ContactHero() {
           </Div>
         </Div>
 
-        <Div className="hidden px-4 lg:block lg:w-1/12"></Div>
+        <Div className="hidden px-4 lg:block lg:w-1/12" />
 
 
         <Div className="w-full justify-center px-4 lg:w-5/12">

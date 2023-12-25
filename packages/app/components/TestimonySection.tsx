@@ -60,10 +60,10 @@ export function TestimonySection() {
           Read Trusted Reviews
         </Text>
 
-        <View className={`mt-8  ${mobile ? 'flex-row flex-wrap gap-3' : 'mx-8  grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-14 lg:gap-20 '} `}>
+        <View className={`mt-8 justify-center ${mobile ? 'flex-row flex-wrap gap-3' : 'mx-8  grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-14 lg:gap-20 '} `}>
           {testimonials.slice(0, numItemsToRender).map((testimony, i) => {
             return (
-              <Article key={i} className="mb-4 items-center justify-center rounded-xl  min-w-[300px] p-3 bg-zinc-950">
+              <Article key={i} className="mb-4 items-center justify-center rounded-xl  min-w-[300px] p-3 bg-zinc-950 max-w-[600px]">
                 <BlockQuote
                   style={{
                     padding: 10,

@@ -33,10 +33,11 @@ export function ContactScreen() {
         className='pb-[300px]'
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
+          flex: 1,
+          width: '100%',
           paddingBottom: !isWeb ? 200 : null,
-          paddingTop: !isWeb ? 40 : 0
-        }}
-        contentContainerClassName='flex-1 w-full bg-black '>
+          paddingTop: !isWeb ? 40 : 0,
+        }}>
         <ContactHero />
       </ScrollView>
     </View >

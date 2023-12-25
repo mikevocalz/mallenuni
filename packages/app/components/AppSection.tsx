@@ -26,12 +26,12 @@ const services = [
 ]
 export function AppSection() {
   return (
-    <Section className="mb-3 items-center">
+    <Section className="mb-3  w-full flex  ">
       <H2 className="my-20 text-3xl text-center text-white font-bold">Discover Our Software Solutions</H2>
 
-      <Div className={`${isWeb ? 'grid lg:grid-cols-3 lg:gap-x-12' : 'flex flex-wrap'} px-6 mt-[70px] `}>
+      <Div className={`${isWeb ? 'grid lg:grid-cols-3 lg:gap-x-12' : 'flex flex-row flex-wrap'} px-6 mt-[70px] `}>
         {services.map((service) => (
-          <Article key={service.id} className="mb-[80px] lg:mb-0">
+          <Article key={service.id} className="mb-[80px] my-auto lg:mb-0 w-full">
             <Div
               className="block h-full rounded-lg bg-zinc-950 pb-[10px]">
               <Div className="flex justify-center">

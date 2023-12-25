@@ -23,22 +23,25 @@ const headerLinks: Array<{
       pathname: '/',
       isActive: (pathname) => pathname === '/',
       name: 'Home',
+      protected: false
     },
     {
       pathname: '/work',
       isActive: (pathname) => pathname.startsWith('/work'),
       name: 'Work',
-      protected: false,
+      protected: false
     },
     {
       pathname: '/about',
       isActive: (pathname) => pathname.startsWith('/about'),
       name: 'About',
+      protected: false
     },
     {
       pathname: '/contact',
       isActive: (pathname) => pathname.startsWith('/contact'),
       name: 'Contact',
+      protected: false
     }
   ]
 
@@ -81,12 +84,6 @@ export function WebHeader() {
               justifyContent: 'center',
 
             }}  >
-            {/* // className="hidden flex-1 flex-row items-center justify-center space-x-8 md:flex"> */}
-            {/* <Text className="headerLink">Home</Text>
-            <Text className="headerLink">Courses</Text>
-            <Text className="headerLink">About</Text>
-            <Text className="headerLink">Contact</Text>
-            <Text className="headerLink">Shop</Text> */}
 
             {headerLinks.map((headerLink: any, idx: number) => {
               const active = headerLink.isActive(pathname)
@@ -105,9 +102,9 @@ export function WebHeader() {
                     type: 'timing',
                     duration: 150,
                   }}
-                  style={{ marginHorizontal: 8 }}
+                  style={{ marginHorizontal: 16 }}
                 >
-                  <Text className={`hidden md:flex text-[26px] stroke-red-600 tracking-wide leading-10 uppercase font-[Bebas-Regular] ${active ? 'text-black text-[28px]' : 'text-zinc-50'}`} >{headerLink.name}</Text>
+                  <Text className={`hidden md:flex text-[26px]  stroke-red-600 tracking-wider leading-10 uppercase font-[BebasNeue-Bold] ${active ? 'text-black text-[28px]' : 'text-zinc-50'}`} >{headerLink.name}</Text>
                 </MotiLink>
               )
             }
